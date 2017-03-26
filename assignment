@@ -6,8 +6,8 @@ MapReduce
 yarn
 These three are also known as Three Pillars of Hadoop 2.x Here major key component change is YARN. 
 How Hadoop 2.x Major Components Works
-All Master Nodes and Slave Nodes contains both MapReduce and HDFS Components. Master Node has two components:Resource Manager,HDFS . HDFS component is also knows as NameNode. It’s NameNode is used to store Meta Data.In Hadoop 2.x, some more Nodes acts as Master Nodes as shown in the above diagram. Each this 2nd level Master Node has 3 components:Node ManagerApplication MasterData NodeEach this 2nd level Master Node again contains one or more Slave Nodes as shown in the above diagram.These Slave Nodes have two components:Node, Manager,HDFSIt’s HDFS component is also knows as Data Node. It’s Data Node component is used to store actual our application Big Data. These nodes does not contain Application Master component.Resource Manager is a Per Cluster Level Component.Resource Manager is again divided into two components Scheduler,Application Manager Resource Manager’s Scheduler is 
-Responsible to scheduler required resources to Applications (that is Per-Application Master).
+All the Master Nodes and Slave Nodes contains both MapReduce and HDFS Components. Master Node has two components Resource Manager,HDFS . HDFS component is also knows as NameNode. It’s NameNode is used to store Meta Data.In Hadoop 2.x, some more Nodes acts as Master Nodes.  this 2nd level Master Node has 3 components Node ManagerApplication MasterData NodeEach this 2nd level Master Node again contains one or more Slave Nodes as shown in the above diagram.These Slave Nodes have two components:Node, Manager,HDFSIt’s HDFS component is also knows as Data Node. It’s Data Node component is used to store actual our application Big Data. These nodes does not contain Application Master component.Resource Manager is a Per Cluster Level Component.Resource Manager is again divided into two components Scheduler,Application Manager Resource Manager’s Scheduler is 
+Responsible to scheduler required resources to Applications.
 It does only scheduling.
 It does care about monitoring or tracking of those Applications.
 
