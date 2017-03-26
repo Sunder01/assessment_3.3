@@ -1,0 +1,30 @@
+
+Hadoop 2.x Major Components
+Hadoop 2.x has the following  Major Components
+HDFs
+MapReduce
+yarn
+These three are also known as Three Pillars of Hadoop 2.x Here major key component change is YARN. 
+How Hadoop 2.x Major Components Works
+All Master Nodes and Slave Nodes contains both MapReduce and HDFS Components. Master Node has two components:Resource Manager,HDFS . HDFS component is also knows as NameNode. It’s NameNode is used to store Meta Data.In Hadoop 2.x, some more Nodes acts as Master Nodes as shown in the above diagram. Each this 2nd level Master Node has 3 components:Node ManagerApplication MasterData NodeEach this 2nd level Master Node again contains one or more Slave Nodes as shown in the above diagram.These Slave Nodes have two components:Node, Manager,HDFSIt’s HDFS component is also knows as Data Node. It’s Data Node component is used to store actual our application Big Data. These nodes does not contain Application Master component.Resource Manager is a Per Cluster Level Component.Resource Manager is again divided into two components Scheduler,Application Manager Resource Manager’s Scheduler is 
+Responsible to scheduler required resources to Applications (that is Per-Application Master).
+It does only scheduling.
+It does care about monitoring or tracking of those Applications.
+
+Node Manager
+Node Manager is a Per-Node Level component.
+It is responsible for
+Managing the life-cycle of the Container.
+Monitoring each Container’s Resources utilization.
+
+Application Master
+Application Master is a per-application level component. It is responsible for:
+Managing assigned Application Life cycle.
+It interacts with both Resource Manager’s Scheduler and Node Manager
+It interacts with Scheduler to acquire required resources.
+It interacts with Node Manager to execute assigned tasks and monitor those task’s status.
+
+Container
+Each Master Node or Slave Node contains set of Containers. In this diagram, Main Node’s Name Node is not showing the Containers. However, it also contains a set of Containers.
+Container is a portion of Memory in HDFS.
+In Hadoop 2.x, Container is similar to Data Slots in Hadoop 1.x. We will see the major differences between these two Components: Slots Vs Containers in my coming posts.
